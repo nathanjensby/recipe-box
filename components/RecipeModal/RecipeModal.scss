@@ -1,0 +1,59 @@
+.root {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    z-index: 9;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalGuts {
+    background-color: $brand-lightGray;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modalHeader {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-right: 20px; // prevent title from overlapping with close button
+}
+
+.closeButton {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 2px;
+    position: absolute;
+    right: 23px;
+    top: 31px;
+}
+
+.overlay {
+    border: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.58);
+}
+
+.modalContent {
+    background-color: $brand-gray;
+    flex-grow: 1;
+    width: 100%;
+}

@@ -1,6 +1,15 @@
-import React from "react";
-import styles from "./Card.scss";
+import React, { useContext } from 'react';
+import styles from './Card.scss';
+import { ModalContext } from '../../utils';
 
-export const Card = () => {
-  return <p className={styles.root}>I am a card!</p>;
+export const Card = ({ id, recipe }) => {
+    const { toggleModal } = useContext(ModalContext);
+    const handleButtonClick = () => {
+        toggleModal(recipe);
+    };
+    return (
+        <button className={styles.root} onClick={handleButtonClick}>
+            {recipe.title}
+        </button>
+    );
 };
